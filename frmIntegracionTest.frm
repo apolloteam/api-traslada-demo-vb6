@@ -594,6 +594,9 @@ Private Sub IntegrationTest()
     Dim sServiceId As String
     Dim sSource As String, sIntegratorServiceId As String, sScheduleDate As String, sAction As String
     Dim sContactPhone As String, sVehicleCategoryCode As String
+    Dim sDescripError As String
+    
+    
     
     Dim sCostCenter1 As String, sCostCenter2 As String
     Dim sCustomProperties1 As String, sCustomProperties2 As String
@@ -656,8 +659,9 @@ Private Sub IntegrationTest()
         If Not oResponse Is Nothing Then
             sCode = oResponse.Item("code")
             sErrorCode = oResponse.Item("errorCode")
+            sDescripError = oResponse.Item("descrip")
             
-            sMensaje = "ERROR API. Code: " & sCode & vbCrLf & _
+            sMensaje = "ERROR API. Code: " & sCode & " " & sDescripError & vbCrLf & _
                                     "ErrorCode: " & sErrorCode
 
                     
