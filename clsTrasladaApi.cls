@@ -177,19 +177,17 @@ On Error GoTo ErrorHandler
  
     If Not oResponse Is Nothing Then
   
+        sJsonResponse = basJSON.ToString(oResponse)
+                
         Select Case GetResponseType(oResponse)
     
             Case StatusMessage
                 ' Error del sistema con formato conocido.
-                sJsonResponse = basJSON.ToString(oResponse)
-                
                 bOkApi = False
                                             
             Case UnHandled
             
                 ' Error formato desconocido.
-                sJsonResponse = basJSON.ToString(oResponse)
-                    
                 If IsUnHandledStatus200(oResponse) Then
                 ' Lo tomo como un OK.
                     bOkApi = True
