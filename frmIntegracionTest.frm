@@ -101,6 +101,7 @@ Begin VB.Form frmIntegracionTest
          Width           =   2895
       End
       Begin VB.TextBox txtSource 
+         Enabled         =   0   'False
          Height          =   285
          Left            =   2160
          TabIndex        =   0
@@ -656,11 +657,9 @@ Private Sub IntegrationTest()
             sCode = oResponse.Item("code")
             sErrorCode = oResponse.Item("errorCode")
             
-            sMensaje = "ERROR API" & vbCrLf & vbCrLf & _
-                    "Code:" & sCode & _
-                    "ErrorCode: " & sErrorCode & vbCrLf & vbCrLf & _
-                    "Request: " & sJsonRequest & vbCrLf & vbCrLf & _
-                    "Responde: " & sJsonResponse
+            sMensaje = "ERROR API. Code: " & sCode & vbCrLf & _
+                                    "ErrorCode: " & sErrorCode
+
                     
             lblRespuestaError.Caption = sMensaje
         Else
