@@ -1,0 +1,10 @@
+clsTrasladaApi = 78, 78, 1163, 702, 
+basRestHelperExtensions = 0, 0, 0, 0, C
+basGlobals = 0, 0, 0, 0, C
+clsRestHeaders = 0, 0, 0, 0, C
+clsRestHelper = 0, 0, 0, 0, C
+clsRestPath = 0, 0, 0, 0, C
+clsRestQueryString = 0, 0, 0, 0, C
+basJSON = 0, 0, 0, 0, C
+clsStringBuilder = 0, 0, 0, 0, C
+frmIntegracionTest = 52, 52, 1137, 676, , 26, 26, 1111, 650, C
