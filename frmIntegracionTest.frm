@@ -1,20 +1,20 @@
 VERSION 5.00
 Begin VB.Form frmIntegracionTest 
    Caption         =   "Test de Integración con API Traslada"
-   ClientHeight    =   7530
+   ClientHeight    =   6555
    ClientLeft      =   120
    ClientTop       =   465
    ClientWidth     =   13575
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
-   ScaleHeight     =   7530
+   ScaleHeight     =   6555
    ScaleWidth      =   13575
    StartUpPosition =   1  'CenterOwner
    Begin VB.Frame Frame 
-      Height          =   4695
+      Height          =   4935
       Index           =   4
       Left            =   480
-      TabIndex        =   49
+      TabIndex        =   40
       Top             =   480
       Width           =   5655
       Begin VB.TextBox txtCustomProperties2 
@@ -115,7 +115,7 @@ Begin VB.Form frmIntegracionTest
          Caption         =   "Hora de ingreso"
          Height          =   375
          Left            =   120
-         TabIndex        =   57
+         TabIndex        =   48
          Top             =   2760
          Width           =   1935
       End
@@ -125,7 +125,7 @@ Begin VB.Form frmIntegracionTest
          Caption         =   "Sentido"
          Height          =   255
          Left            =   -600
-         TabIndex        =   56
+         TabIndex        =   47
          Top             =   2400
          Width           =   2655
       End
@@ -135,7 +135,7 @@ Begin VB.Form frmIntegracionTest
          Caption         =   "Centro costo 2 (Cabecera)"
          Height          =   375
          Left            =   120
-         TabIndex        =   55
+         TabIndex        =   46
          Top             =   3480
          Width           =   1935
       End
@@ -145,7 +145,7 @@ Begin VB.Form frmIntegracionTest
          Caption         =   "Centro costo 1 (ID)"
          Height          =   375
          Left            =   120
-         TabIndex        =   54
+         TabIndex        =   45
          Top             =   3120
          Width           =   1935
       End
@@ -155,7 +155,7 @@ Begin VB.Form frmIntegracionTest
          Caption         =   "Teléfono de contacto"
          Height          =   255
          Left            =   120
-         TabIndex        =   30
+         TabIndex        =   26
          Top             =   3840
          Width           =   1935
       End
@@ -164,7 +164,7 @@ Begin VB.Form frmIntegracionTest
          Caption         =   "Categoria de Vehículo"
          Height          =   255
          Left            =   360
-         TabIndex        =   29
+         TabIndex        =   25
          Top             =   2040
          Width           =   1695
       End
@@ -173,7 +173,7 @@ Begin VB.Form frmIntegracionTest
          Caption         =   "Hora viaje"
          Height          =   255
          Left            =   1320
-         TabIndex        =   28
+         TabIndex        =   24
          Top             =   1680
          Width           =   735
       End
@@ -182,7 +182,7 @@ Begin VB.Form frmIntegracionTest
          Caption         =   "Fecha viaje"
          Height          =   255
          Left            =   1080
-         TabIndex        =   27
+         TabIndex        =   23
          Top             =   1320
          Width           =   975
       End
@@ -192,7 +192,7 @@ Begin VB.Form frmIntegracionTest
          Caption         =   "Operación"
          Height          =   255
          Left            =   -600
-         TabIndex        =   25
+         TabIndex        =   21
          Top             =   600
          Width           =   2655
       End
@@ -202,7 +202,7 @@ Begin VB.Form frmIntegracionTest
          Caption         =   "Cód. reserva Intercargo (ID)"
          Height          =   375
          Left            =   -120
-         TabIndex        =   26
+         TabIndex        =   22
          Top             =   960
          Width           =   2175
       End
@@ -211,40 +211,32 @@ Begin VB.Form frmIntegracionTest
          Caption         =   "Source"
          Height          =   255
          Left            =   960
-         TabIndex        =   24
+         TabIndex        =   20
          Top             =   240
          Width           =   1095
       End
    End
    Begin VB.Frame Frame 
-      Height          =   1455
+      Height          =   1095
       Index           =   3
       Left            =   6360
-      TabIndex        =   48
-      Top             =   5160
+      TabIndex        =   39
+      Top             =   4320
       Width           =   6735
       Begin VB.TextBox txtAddress 
          Height          =   285
          Index           =   3
          Left            =   2040
-         TabIndex        =   20
+         TabIndex        =   17
          Top             =   240
-         Width           =   4455
-      End
-      Begin VB.TextBox txtLocality 
-         Height          =   285
-         Index           =   3
-         Left            =   2040
-         TabIndex        =   21
-         Top             =   600
          Width           =   4455
       End
       Begin VB.TextBox txtPassengerName 
          Height          =   285
          Index           =   3
          Left            =   2040
-         TabIndex        =   22
-         Top             =   960
+         TabIndex        =   18
+         Top             =   600
          Width           =   4455
       End
       Begin VB.Label lblAddress 
@@ -253,18 +245,8 @@ Begin VB.Form frmIntegracionTest
          Height          =   255
          Index           =   3
          Left            =   480
-         TabIndex        =   40
+         TabIndex        =   33
          Top             =   240
-         Width           =   1455
-      End
-      Begin VB.Label lblLocality 
-         Alignment       =   1  'Right Justify
-         Caption         =   "Localidad destino 3"
-         Height          =   255
-         Index           =   3
-         Left            =   480
-         TabIndex        =   41
-         Top             =   600
          Width           =   1455
       End
       Begin VB.Label lblPassengerName 
@@ -273,40 +255,32 @@ Begin VB.Form frmIntegracionTest
          Height          =   255
          Index           =   3
          Left            =   360
-         TabIndex        =   42
-         Top             =   960
+         TabIndex        =   34
+         Top             =   600
          Width           =   1575
       End
    End
    Begin VB.Frame Frame 
-      Height          =   1455
+      Height          =   1095
       Index           =   2
       Left            =   6360
-      TabIndex        =   47
-      Top             =   3720
+      TabIndex        =   38
+      Top             =   3120
       Width           =   6735
       Begin VB.TextBox txtAddress 
          Height          =   285
          Index           =   2
          Left            =   2040
-         TabIndex        =   17
+         TabIndex        =   15
          Top             =   240
-         Width           =   4455
-      End
-      Begin VB.TextBox txtLocality 
-         Height          =   285
-         Index           =   2
-         Left            =   2040
-         TabIndex        =   18
-         Top             =   600
          Width           =   4455
       End
       Begin VB.TextBox txtPassengerName 
          Height          =   285
          Index           =   2
          Left            =   2040
-         TabIndex        =   19
-         Top             =   960
+         TabIndex        =   16
+         Top             =   600
          Width           =   4455
       End
       Begin VB.Label lblAddress 
@@ -315,18 +289,8 @@ Begin VB.Form frmIntegracionTest
          Height          =   255
          Index           =   2
          Left            =   240
-         TabIndex        =   37
+         TabIndex        =   31
          Top             =   240
-         Width           =   1695
-      End
-      Begin VB.Label lblLocality 
-         Alignment       =   1  'Right Justify
-         Caption         =   "Localidad destino 2"
-         Height          =   255
-         Index           =   2
-         Left            =   240
-         TabIndex        =   38
-         Top             =   600
          Width           =   1695
       End
       Begin VB.Label lblPassengerName 
@@ -335,40 +299,32 @@ Begin VB.Form frmIntegracionTest
          Height          =   255
          Index           =   2
          Left            =   240
-         TabIndex        =   39
-         Top             =   960
+         TabIndex        =   32
+         Top             =   600
          Width           =   1695
       End
    End
    Begin VB.Frame Frame 
-      Height          =   1455
+      Height          =   1095
       Index           =   1
       Left            =   6360
-      TabIndex        =   46
-      Top             =   2280
+      TabIndex        =   37
+      Top             =   1920
       Width           =   6735
       Begin VB.TextBox txtAddress 
          Height          =   285
          Index           =   1
          Left            =   2040
-         TabIndex        =   14
+         TabIndex        =   13
          Top             =   240
-         Width           =   4455
-      End
-      Begin VB.TextBox txtLocality 
-         Height          =   285
-         Index           =   1
-         Left            =   2040
-         TabIndex        =   15
-         Top             =   600
          Width           =   4455
       End
       Begin VB.TextBox txtPassengerName 
          Height          =   285
          Index           =   1
          Left            =   2040
-         TabIndex        =   16
-         Top             =   960
+         TabIndex        =   14
+         Top             =   600
          Width           =   4455
       End
       Begin VB.Label lblAddress 
@@ -377,18 +333,8 @@ Begin VB.Form frmIntegracionTest
          Height          =   255
          Index           =   1
          Left            =   120
-         TabIndex        =   34
+         TabIndex        =   29
          Top             =   240
-         Width           =   1815
-      End
-      Begin VB.Label lblLocality 
-         Alignment       =   1  'Right Justify
-         Caption         =   "Localidad destino 1"
-         Height          =   255
-         Index           =   1
-         Left            =   120
-         TabIndex        =   35
-         Top             =   600
          Width           =   1815
       End
       Begin VB.Label lblPassengerName 
@@ -397,16 +343,16 @@ Begin VB.Form frmIntegracionTest
          Height          =   255
          Index           =   1
          Left            =   120
-         TabIndex        =   36
-         Top             =   960
+         TabIndex        =   30
+         Top             =   600
          Width           =   1815
       End
    End
    Begin VB.Frame Frame 
-      Height          =   1455
+      Height          =   1095
       Index           =   0
       Left            =   6360
-      TabIndex        =   45
+      TabIndex        =   36
       Top             =   480
       Width           =   6735
       Begin VB.TextBox txtAddress 
@@ -417,20 +363,12 @@ Begin VB.Form frmIntegracionTest
          Top             =   240
          Width           =   4455
       End
-      Begin VB.TextBox txtLocality 
+      Begin VB.TextBox txtPassengerName 
          Height          =   285
          Index           =   0
          Left            =   2040
          TabIndex        =   12
          Top             =   600
-         Width           =   4455
-      End
-      Begin VB.TextBox txtPassengerName 
-         Height          =   285
-         Index           =   0
-         Left            =   2040
-         TabIndex        =   13
-         Top             =   960
          Width           =   4455
       End
       Begin VB.Label lblAddress 
@@ -439,18 +377,8 @@ Begin VB.Form frmIntegracionTest
          Height          =   255
          Index           =   0
          Left            =   240
-         TabIndex        =   31
+         TabIndex        =   27
          Top             =   240
-         Width           =   1695
-      End
-      Begin VB.Label lblLocality 
-         Alignment       =   1  'Right Justify
-         Caption         =   "Localidad origen"
-         Height          =   255
-         Index           =   0
-         Left            =   240
-         TabIndex        =   32
-         Top             =   600
          Width           =   1695
       End
       Begin VB.Label lblPassengerName 
@@ -459,8 +387,8 @@ Begin VB.Form frmIntegracionTest
          Height          =   255
          Index           =   0
          Left            =   120
-         TabIndex        =   33
-         Top             =   960
+         TabIndex        =   28
+         Top             =   600
          Width           =   1815
       End
    End
@@ -477,9 +405,18 @@ Begin VB.Form frmIntegracionTest
       EndProperty
       Height          =   375
       Left            =   10920
-      TabIndex        =   23
-      Top             =   6840
+      TabIndex        =   19
+      Top             =   5760
       Width           =   2175
+   End
+   Begin VB.Label Label 
+      Caption         =   "* Para ingresar varios pasajeros debe separarlos con punto y coma."
+      Height          =   255
+      Index           =   1
+      Left            =   600
+      TabIndex        =   49
+      Top             =   5520
+      Width           =   4935
    End
    Begin VB.Label lblRespuestaError 
       BeginProperty Font 
@@ -493,9 +430,9 @@ Begin VB.Form frmIntegracionTest
       EndProperty
       ForeColor       =   &H000000C0&
       Height          =   495
-      Left            =   480
-      TabIndex        =   53
-      Top             =   6720
+      Left            =   600
+      TabIndex        =   44
+      Top             =   5880
       Width           =   5775
    End
    Begin VB.Label lblRespuestaOk 
@@ -509,11 +446,11 @@ Begin VB.Form frmIntegracionTest
          Strikethrough   =   0   'False
       EndProperty
       ForeColor       =   &H0000C000&
-      Height          =   255
-      Left            =   6480
-      TabIndex        =   52
-      Top             =   6960
-      Width           =   4095
+      Height          =   495
+      Left            =   6600
+      TabIndex        =   43
+      Top             =   5880
+      Width           =   4215
    End
    Begin VB.Label Label2 
       Caption         =   "Destino/s"
@@ -528,8 +465,8 @@ Begin VB.Form frmIntegracionTest
       EndProperty
       Height          =   255
       Left            =   6360
-      TabIndex        =   51
-      Top             =   2040
+      TabIndex        =   42
+      Top             =   1680
       Width           =   2535
    End
    Begin VB.Label Label1 
@@ -545,18 +482,9 @@ Begin VB.Form frmIntegracionTest
       EndProperty
       Height          =   255
       Left            =   6360
-      TabIndex        =   50
+      TabIndex        =   41
       Top             =   240
       Width           =   2535
-   End
-   Begin VB.Label Label 
-      Caption         =   "* Para ingresar varios pasajeros debe separarlos con punto y coma."
-      Height          =   255
-      Index           =   1
-      Left            =   600
-      TabIndex        =   44
-      Top             =   5280
-      Width           =   4935
    End
    Begin VB.Label Label 
       Caption         =   "Datos Generales"
@@ -572,7 +500,7 @@ Begin VB.Form frmIntegracionTest
       Height          =   255
       Index           =   0
       Left            =   480
-      TabIndex        =   43
+      TabIndex        =   35
       Top             =   240
       Width           =   2535
    End
@@ -582,9 +510,17 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+'****************************************************************************************************************************************
+' INTEGRACION TEST (API TRASLADA)
+' Fecha: 30/05/2022
+'****************************************************************************************************************************************
+
+Private Sub Form_Load()
+    txtScheduleDate.Text = Format(Now, "DD/MM/YYYY")
+End Sub
+
 Private Sub IntegrationTest()
     Dim TrasladaApi As New clsTrasladaApi
-    
     Dim bOK As Boolean
     Dim sJsonRequest As String
     Dim sJsonResponse As String
@@ -595,16 +531,12 @@ Private Sub IntegrationTest()
     Dim sSource As String, sIntegratorServiceId As String, sScheduleDate As String, sAction As String
     Dim sContactPhone As String, sVehicleCategoryCode As String
     Dim sDescripError As String
-    
-    
-    
     Dim sCostCenter1 As String, sCostCenter2 As String
     Dim sCustomProperties1 As String, sCustomProperties2 As String
-
-    Dim sAddress_0 As String, sLocality_0 As String, sPassengerName_0 As String
-    Dim sAddress_1 As String, sLocality_1 As String, sPassengerName_1 As String
-    Dim sAddress_2 As String, sLocality_2 As String, sPassengerName_2 As String
-    Dim sAddress_3 As String, sLocality_3 As String, sPassengerName_3 As String
+    Dim sAddress_0 As String, sPassengerName_0 As String
+    Dim sAddress_1 As String, sPassengerName_1 As String
+    Dim sAddress_2 As String, sPassengerName_2 As String
+    Dim sAddress_3 As String, sPassengerName_3 As String
     Dim sMensaje As String
     
     ' Datos Generales.
@@ -621,56 +553,47 @@ Private Sub IntegrationTest()
     
     ' Origen.
     sAddress_0 = txtAddress(0).Text
-    sLocality_0 = txtLocality(0).Text
     sPassengerName_0 = txtPassengerName(0).Text
     
     ' Destino 1.
     sAddress_1 = txtAddress(1).Text
-    sLocality_1 = txtLocality(1).Text
     sPassengerName_1 = txtPassengerName(1).Text
     
     ' Destino 2.
     sAddress_2 = txtAddress(2).Text
-    sLocality_2 = txtLocality(2).Text
     sPassengerName_2 = txtPassengerName(2).Text
     
     ' Destino 3.
     sAddress_3 = txtAddress(3).Text
-    sLocality_3 = txtLocality(3).Text
     sPassengerName_3 = txtPassengerName(3).Text
     
     ' Request API.
     bOK = TrasladaApi.PostBookingServicePlane(g_sBaseApiURL, g_sApiKey, sJsonRequest, sJsonResponse, oResponse, _
                                                 sSource, sIntegratorServiceId, sScheduleDate, sAction, sContactPhone, sVehicleCategoryCode, _
                                                 sCostCenter1, sCostCenter2, sCustomProperties1, sCustomProperties2, _
-                                                sAddress_0, sLocality_0, sPassengerName_0, _
-                                                sAddress_1, sLocality_1, sPassengerName_1, _
-                                                sAddress_2, sLocality_2, sPassengerName_2, _
-                                                sAddress_3, sLocality_3, sPassengerName_3)
+                                                sAddress_0, sPassengerName_0, _
+                                                sAddress_1, sPassengerName_1, _
+                                                sAddress_2, sPassengerName_2, _
+                                                sAddress_3, sPassengerName_3)
     ' Evalua respuesta.
     If bOK Then
-        
+        ' OK.
         sServiceId = oResponse.Item("value")
         sMensaje = "Respuesta de API OK. ServiceId: " & sServiceId
         
         lblRespuestaOk.Caption = sMensaje
     Else
-        
+        ' Con error.
         If Not oResponse Is Nothing Then
             sCode = oResponse.Item("code")
             sErrorCode = oResponse.Item("errorCode")
             sDescripError = oResponse.Item("descrip")
-            
-            sMensaje = "ERROR API. Code: " & sCode & " " & sDescripError & vbCrLf & _
-                                    "ErrorCode: " & sErrorCode
-
-                    
-            lblRespuestaError.Caption = sMensaje
+            sMensaje = "ERROR API. Code: " & sCode & " " & sDescripError & vbCrLf & "ErrorCode: " & sErrorCode
         Else
             sMensaje = "Error desconocido"
-            
-            lblRespuestaError.Caption = sMensaje
         End If
+        
+        lblRespuestaError.Caption = sMensaje
     End If
     
 End Sub
@@ -678,5 +601,6 @@ End Sub
 Private Sub cmdIntegrar_Click()
     IntegrationTest
 End Sub
+
 
 

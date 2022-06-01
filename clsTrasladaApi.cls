@@ -36,11 +36,13 @@ Attribute VB_Exposed = False
 ' sCustomProperties1:   Propiedad personalizada 1 (Sentido: "INGRESO", "EGRESO").
 ' sCustomProperties2:   Propiedad personalizada 2 (Hora de ingreso. Formato: HH:mm).
 ' sAddress_0:           Dirección de origen.
-' sLocality_0:          Localidad de la dirección de origen (dejar en blanco si está incluida en sAdress_0).
 ' sPassengerName_0:     Nombre del pasajero o pasajeros separados por ";" del origen.
 ' sAddress_1:           Dirección de destino 1.
-' sLocality_1:          Localidad de la dirección de destino 1 (dejar en blanco si está incluida en sAdress_0).
 ' sPassengerName_1:     Nombre del pasajero o pasajeros separados por ";" del destino 1.
+' sAddress_2:           Dirección de destino 2.
+' sPassengerName_2:     Nombre del pasajero o pasajeros separados por ";" del destino 1.
+' sAddress_3:           Dirección de destino 3.
+' sPassengerName_3:     Nombre del pasajero o pasajeros separados por ";" del destino 3.
 
 '-----------------------------------------------------------------------------------------------------------------------------------------
 Public Function PostBookingServicePlane(sUrlApi As String, sApiKey As String, _
@@ -49,10 +51,10 @@ Public Function PostBookingServicePlane(sUrlApi As String, sApiKey As String, _
                                         sAction As String, sContactPhone As String, sVehicleCategoryCode As String, _
                                         sCostCenter1 As String, sCostCenter2 As String, _
                                         sCustomProperties1 As String, sCustomProperties2 As String, _
-                                        sAddress_0 As String, sLocality_0 As String, sPassengerName_0 As String, _
-                                        sAddress_1 As String, sLocality_1 As String, sPassengerName_1 As String, _
-                                        sAddress_2 As String, sLocality_2 As String, sPassengerName_2 As String, _
-                                        sAddress_3 As String, sLocality_3 As String, sPassengerName_3 As String) As Boolean
+                                        sAddress_0 As String, sPassengerName_0 As String, _
+                                        sAddress_1 As String, sPassengerName_1 As String, _
+                                        sAddress_2 As String, sPassengerName_2 As String, _
+                                        sAddress_3 As String, sPassengerName_3 As String) As Boolean
 
 On Error GoTo ErrorHandler
     
@@ -95,7 +97,7 @@ On Error GoTo ErrorHandler
     dRoutePoints_0.Add "name", ""
     dRoutePoints_0.Add "address", sAddress_0
     dRoutePoints_0.Add "address2", ""
-    dRoutePoints_0.Add "locality", sLocality_0
+    dRoutePoints_0.Add "locality", ""
     dRoutePoints_0.Add "passengerName", sPassengerName_0
     dRoutePoints_0.Add "passengerEmail", ""
     dRoutePoints_0.Add "passengerPhone", ""
@@ -111,7 +113,7 @@ On Error GoTo ErrorHandler
     dRoutePoints_1.Add "name", ""
     dRoutePoints_1.Add "address", sAddress_1
     dRoutePoints_1.Add "address2", ""
-    dRoutePoints_1.Add "locality", sLocality_1
+    dRoutePoints_1.Add "locality", ""
     dRoutePoints_1.Add "passengerName", sPassengerName_1
     dRoutePoints_1.Add "passengerEmail", ""
     dRoutePoints_1.Add "passengerPhone", ""
@@ -124,35 +126,39 @@ On Error GoTo ErrorHandler
     
     ' Destino 2.
     Dim dRoutePoints_2 As New Dictionary
-    dRoutePoints_2.Add "name", ""
-    dRoutePoints_2.Add "address", sAddress_2
-    dRoutePoints_2.Add "address2", ""
-    dRoutePoints_2.Add "locality", sLocality_2
-    dRoutePoints_2.Add "passengerName", sPassengerName_2
-    dRoutePoints_2.Add "passengerEmail", ""
-    dRoutePoints_2.Add "passengerPhone", ""
-    dRoutePoints_2.Add "passengerIdentificationNumber", ""
-    dRoutePoints_2.Add "latitud", ""
-    dRoutePoints_2.Add "longitude", ""
-    dRoutePoints_2.Add "flightNumber", Null
-    dRoutePoints_2.Add "flightAirline", Null
-    cRoutePoints.Add dRoutePoints_2
+    If Len(sAddress_2) > 0 Then
+        dRoutePoints_2.Add "name", ""
+        dRoutePoints_2.Add "address", sAddress_2
+        dRoutePoints_2.Add "address2", ""
+        dRoutePoints_2.Add "locality", ""
+        dRoutePoints_2.Add "passengerName", sPassengerName_2
+        dRoutePoints_2.Add "passengerEmail", ""
+        dRoutePoints_2.Add "passengerPhone", ""
+        dRoutePoints_2.Add "passengerIdentificationNumber", ""
+        dRoutePoints_2.Add "latitud", ""
+        dRoutePoints_2.Add "longitude", ""
+        dRoutePoints_2.Add "flightNumber", Null
+        dRoutePoints_2.Add "flightAirline", Null
+        cRoutePoints.Add dRoutePoints_2
+    End If
     
     ' Destino 3.
     Dim dRoutePoints_3 As New Dictionary
-    dRoutePoints_3.Add "name", ""
-    dRoutePoints_3.Add "address", sAddress_3
-    dRoutePoints_3.Add "address2", ""
-    dRoutePoints_3.Add "locality", sLocality_3
-    dRoutePoints_3.Add "passengerName", sPassengerName_3
-    dRoutePoints_3.Add "passengerEmail", ""
-    dRoutePoints_3.Add "passengerPhone", ""
-    dRoutePoints_3.Add "passengerIdentificationNumber", ""
-    dRoutePoints_3.Add "latitud", ""
-    dRoutePoints_3.Add "longitude", ""
-    dRoutePoints_3.Add "flightNumber", Null
-    dRoutePoints_3.Add "flightAirline", Null
-    cRoutePoints.Add dRoutePoints_3
+    If Len(sAddress_3) > 0 Then
+        dRoutePoints_3.Add "name", ""
+        dRoutePoints_3.Add "address", sAddress_3
+        dRoutePoints_3.Add "address2", ""
+        dRoutePoints_3.Add "locality", ""
+        dRoutePoints_3.Add "passengerName", sPassengerName_3
+        dRoutePoints_3.Add "passengerEmail", ""
+        dRoutePoints_3.Add "passengerPhone", ""
+        dRoutePoints_3.Add "passengerIdentificationNumber", ""
+        dRoutePoints_3.Add "latitud", ""
+        dRoutePoints_3.Add "longitude", ""
+        dRoutePoints_3.Add "flightNumber", Null
+        dRoutePoints_3.Add "flightAirline", Null
+        cRoutePoints.Add dRoutePoints_3
+    End If
             
     dBody.Add "routePoints", cRoutePoints
     
