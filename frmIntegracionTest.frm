@@ -241,13 +241,13 @@ Begin VB.Form frmIntegracionTest
       End
       Begin VB.Label lblAddress 
          Alignment       =   1  'Right Justify
-         Caption         =   "Dirección destino 3"
+         Caption         =   "Dirección/Lugar destino 3"
          Height          =   255
          Index           =   3
-         Left            =   480
+         Left            =   60
          TabIndex        =   33
-         Top             =   240
-         Width           =   1455
+         Top             =   300
+         Width           =   1875
       End
       Begin VB.Label lblPassengerName 
          Alignment       =   1  'Right Justify
@@ -285,13 +285,13 @@ Begin VB.Form frmIntegracionTest
       End
       Begin VB.Label lblAddress 
          Alignment       =   1  'Right Justify
-         Caption         =   "Dirección destino 2"
+         Caption         =   "Dirección/Lugar destino 2"
          Height          =   255
          Index           =   2
-         Left            =   240
+         Left            =   60
          TabIndex        =   31
          Top             =   240
-         Width           =   1695
+         Width           =   1875
       End
       Begin VB.Label lblPassengerName 
          Alignment       =   1  'Right Justify
@@ -329,13 +329,13 @@ Begin VB.Form frmIntegracionTest
       End
       Begin VB.Label lblAddress 
          Alignment       =   1  'Right Justify
-         Caption         =   "Dirección destino 1"
+         Caption         =   "Dirección/Lugar destino 1"
          Height          =   255
          Index           =   1
-         Left            =   120
+         Left            =   60
          TabIndex        =   29
          Top             =   240
-         Width           =   1815
+         Width           =   1875
       End
       Begin VB.Label lblPassengerName 
          Alignment       =   1  'Right Justify
@@ -373,7 +373,7 @@ Begin VB.Form frmIntegracionTest
       End
       Begin VB.Label lblAddress 
          Alignment       =   1  'Right Justify
-         Caption         =   "Dirección origen"
+         Caption         =   "Dirección/Lugar origen"
          Height          =   255
          Index           =   0
          Left            =   240

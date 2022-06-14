@@ -25,7 +25,7 @@ Attribute VB_Exposed = False
 ' sJsonRequest: (ref)   Se asignan los datos del diccionario generado convertido a json (para control de lo que realmente se manda al api).
 ' sJsonResponse: (ref)  Se asigna el json de respuesta del api.
 ' oResponse: (ref)      Se asigna el json de respuesta convertido a objeto de VB6 para poder leer los datos.
-' sSource:              Dato requerido.
+' sSource:              Dato requerido ("IntegradorPool").
 ' sIntegratorServiceId: Código identificador de reserva de Intercargo.
 ' sScheduleDate:        Fecha del traslado (formato: yyyy-MM-ddTHH:mm).
 ' sAction:              Determina el tipo de acción a realizar (reserva, modificación o cancelación). Datos válidos Booking|Update|Cancelation.
@@ -35,13 +35,13 @@ Attribute VB_Exposed = False
 ' sCostCenter2:         Centro de costo 2 (Cabecera).
 ' sCustomProperties1:   Propiedad personalizada 1 (Sentido: "INGRESO", "EGRESO").
 ' sCustomProperties2:   Propiedad personalizada 2 (Hora de ingreso. Formato: HH:mm).
-' sAddress_0:           Dirección de origen.
+' sAddress_0:           Dirección de origen (o nombre del lugar/punto de encuentro).
 ' sPassengerName_0:     Nombre del pasajero o pasajeros separados por ";" del origen.
-' sAddress_1:           Dirección de destino 1.
+' sAddress_1:           Dirección de destino 1(o nombre del lugar/punto de encuentro).
 ' sPassengerName_1:     Nombre del pasajero o pasajeros separados por ";" del destino 1.
-' sAddress_2:           Dirección de destino 2.
+' sAddress_2:           Dirección de destino 2 (o nombre del lugar/punto de encuentro).
 ' sPassengerName_2:     Nombre del pasajero o pasajeros separados por ";" del destino 1.
-' sAddress_3:           Dirección de destino 3.
+' sAddress_3:           Dirección de destino 3 (o nombre del lugar/punto de encuentro).
 ' sPassengerName_3:     Nombre del pasajero o pasajeros separados por ";" del destino 3.
 
 '-----------------------------------------------------------------------------------------------------------------------------------------
@@ -61,6 +61,7 @@ On Error GoTo ErrorHandler
     Dim bOkApi As Boolean
     
     ' Limpia variables de retorno.
+    sJsonRequest = ""
     sJsonResponse = ""
     
     ' Queries.
@@ -79,14 +80,14 @@ On Error GoTo ErrorHandler
             
     ' Datos generales.
     dBody.Add "source", sSource
-    dBody.Add "serviceId", ""
+    dBody.Add "serviceId", "" ' No asignar nada, es nuestro id que se va a generar.
     dBody.Add "integratorServiceId", sIntegratorServiceId
     dBody.Add "scheduleDate", sScheduleDate
     dBody.Add "action", sAction
     dBody.Add "contactEmail", ""
     dBody.Add "contactPhone", sContactPhone
-    dBody.Add "timeRequired", 0
-    dBody.Add "passengerCount", 0
+    dBody.Add "timeRequired", 0 ' No usar.
+    dBody.Add "passengerCount", 0 ' No usar, se calcula automáticamente.
     dBody.Add "luggageCount", 0
     dBody.Add "vehicleCategoryCode", sVehicleCategoryCode
     dBody.Add "costCenter1", sCostCenter1
